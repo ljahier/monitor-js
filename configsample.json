@@ -1,0 +1,6 @@
+{
+    "slack_webhook": "https://hooks.slack.com/services/.../.../...",
+    "target_url": "https://....tld/",
+    "port": 3000,
+    "polling_inteval": 15000
+}

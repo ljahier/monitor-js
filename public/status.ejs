@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ikobox Status Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light rounded"
+        aria-label="Eleventh navbar example"
+      >
+        <div class="container-fluid">
+          <img src="./logo-iko-long.png" width="150px" alt="Logo Ikobox" />
+          <h1 class="mt-3" style="margin-left: 30px">Status Page</h1>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <a href="https://ikobox.fr">Go to Ikobox website</a>
+          </div>
+        </div>
+      </nav>
+      <div class="mt-5">
+        <!-- BANDEAU AVEC UNE COULEUR QUI DIT SI QUELQUE CHOSE NE VAS PAS auto refresh every 5s -->
+        <% if (currentStatus === "green") { %>
+        <div class="alert alert-success" role="alert">
+          Api is working properly !
+        </div>
+        <% } else if (currentStatus === "yellow") { %>
+        <div class="alert alert-warning" role="alert">
+          Api has some mistakes !
+        </div>
+        <% } else { %>
+        <div class="alert alert-danger" role="alert">Api is dead !</div>
+        <% } %>
+      </div>
+    </div>
+    <script>
+        setTimeout("location.reload(true);", 5000)
+    </script>
+  </body>
+</html>
